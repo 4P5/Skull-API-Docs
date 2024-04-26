@@ -10,7 +10,7 @@ On their own, Skulls are relatively useful. You can do some cool stuff with them
 
 Skulls handle the life cycle of parts, textures, animations, etc., and will automatically clean these up when they exit. If you use the correct methods, you'll never have to worry about accidentally leaving ModelParts behind, or using up all the textures.
 
-[Read more about Skulls here](/skulls)
+[Read more about Skulls here](/Skull-API-Docs/skulls)
 ## Modes
 Modes are primarily an event system, with many different events to help you manage Skulls. Skulls can have a single Mode, and Modes can have many Skulls.
 
@@ -20,7 +20,7 @@ Events are the main way you'll interact with Skulls. For example, the `Mode:tick
 
 There are also Mode-focused events, like `Mode:preTick`. If the Mode has at least one Skull, this event will run before ticking its Skulls. This lets you treat the Skulls as a list of positions or data, so you're not limited to per-Skull features.
 
-[Read more about Modes here](/modes)
+[Read more about Modes here](/Skull-API-Docs/modes)
 ## Using the Skull API
 Typically, you'll use the Skull API by creating a Mode, adding some events, then performing stuff in those events. Take this Mode as an example:
 ```lua
@@ -44,9 +44,9 @@ end
 ```
 We're doing a few things here:
 - The first three lines can be ignored. We're just requiring the Skull API and creating a new mode with the file name as its ID.
-- We set the name of the mode to Fountain. This will show up in the [action wheel](/action_wheel).
+- We set the name of the mode to Fountain. This will show up in the [action wheel](/Skull-API-Docs/action_wheel).
 - We set the valid blocks to `"stone_bricks"`, which matches any blocks with that string in their name (including mossy, cracked, stair/slab variants).
-- We set the mode's mini item block to `"chiseled_stone_bricks"`. [mini blocks](/mini_blocks) are an optional library, but make it easier to set fancy custom icons.
+- We set the mode's mini item block to `"chiseled_stone_bricks"`. [mini blocks](/Skull-API-Docs/mini_blocks) are an optional library, but make it easier to set fancy custom icons.
 
 Then, we register the init event.
 - We take a single Skull as an argument. This event runs every time a Skull is added to this mode.
