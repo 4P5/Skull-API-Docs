@@ -1,10 +1,11 @@
-# Explanation
+## Explanation
 
 Figura limits what scripts can do when you're not the host. APIs like `keybinds` only work when you're the one running the avatar.
 
 However, there's a workaround. Using `avatar:store("keybinds", keybinds)`, you store *your own* keybinds API in your avatar, where my script can access it.
 > NB: The above code is unsafe, as it allows *anyone* to register keybinds on your behalf.
-# Workaround
+
+## Workaround
 
 Use this code to pass your keybinds API to my script. Only I will be able to access it and register keybinds for you.  **You can run the code with `/figura run`**.
 
