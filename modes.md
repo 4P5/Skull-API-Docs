@@ -20,7 +20,7 @@ Modes work with the concept of *events*. These are functions that are called at 
 - `Mode:init(skull)` runs once for every Skull added to a Mode.
 - `Mode:globalInit()` runs every time the Mode goes from *0 Skulls* to *1 Skull*. This event can run multiple times. You can use this if you want to do stuff independent of any one Skull.
 - `Mode:globalSetup()` runs once, when the Mode goes from *0 Skulls* to *1 Skull*. It will only run again when the avatar is reloaded. You can use this to delay laggy calculations to when the data is actually needed.
-- `Mode:debugInit()` runs when the Mode is placed into Debug Mode. You can optionally expose some extra data here with the [debugger](/Skull-API-Docs/debugger).
+- `Mode:debugInit()` runs when the Mode is placed into Debug Mode. You can optionally expose some extra data here with the [debugger](debugger).
 
 **Tick** events run once per world tick. They run in the following order:
 - `Mode:preTick(skulls)` runs first, with a list of all Skulls tracked by the Mode. This will only run if the Mode has at least once Skull.
